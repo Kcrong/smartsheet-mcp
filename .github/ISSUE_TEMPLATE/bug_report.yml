@@ -1,0 +1,84 @@
+name: Bug report
+description: Something isn't working as expected.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report!
+        Please do **not** include your Smartsheet access token or any customer
+        data in this issue. Redact identifiers before pasting logs.
+
+  - type: input
+    id: version
+    attributes:
+      label: smartsheet-mcp version
+      description: Output of `smartsheet-mcp --version`
+      placeholder: e.g. smartsheet-mcp 0.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: e.g. 3.12.3
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: e.g. macOS 14.5, Ubuntu 24.04, Windows 11
+    validations:
+      required: true
+
+  - type: dropdown
+    id: client
+    attributes:
+      label: MCP client
+      options:
+        - Kiro
+        - Claude Desktop
+        - Cursor
+        - VS Code
+        - Other / direct stdio
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the unexpected behaviour.
+      placeholder: Called `smartsheet_get_sheet` and got an HTTP 500…
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. `pip install smartsheet-mcp`
+        2. Configure Kiro with `…`
+        3. Ask Kiro to call `smartsheet_list_sheets`
+        4. …
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / stack trace (redacted)
+      render: shell
+      description: |
+        Remove your access token and any customer data before pasting.

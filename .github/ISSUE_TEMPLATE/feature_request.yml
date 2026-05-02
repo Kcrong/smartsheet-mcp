@@ -1,0 +1,45 @@
+name: Feature request
+description: Suggest a new tool, option, or behaviour.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Write operations (add/update/delete) are intentionally out of scope
+        for the v0.x line. Feature requests for new **read** tools are very
+        welcome. Write-related requests are accepted but will be triaged
+        separately.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed API / tool
+      description: |
+        If you're suggesting a new tool, include the Smartsheet endpoint and
+        any arguments it should take.
+      placeholder: |
+        Tool name: smartsheet_list_sheet_versions
+        Endpoint:  GET /sheets/{id}/versions
+        Args:      sheet_id (required)
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: This is a **read-only** addition
+          required: false
+        - label: This is a **write** operation (requires design review)
+          required: false

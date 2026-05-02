@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "smartsheet": {
+      "command": "/absolute/path/to/smartsheets/.venv/bin/python",
+      "args": ["-m", "smartsheet_mcp"],
+      "env": {
+        "SMARTSHEET_ACCESS_TOKEN": "REPLACE_WITH_YOUR_SMARTSHEET_ACCESS_TOKEN"
+      },
+      "timeout": 120000
+    }
+  }
+}

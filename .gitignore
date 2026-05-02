@@ -1,0 +1,94 @@
+# -----------------------------------------------------------------------------
+# Secrets & local configuration (NEVER commit these)
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets/
+# Kiro / MCP local configuration containing API tokens
+.kiro/settings/mcp.json
+# Authentication artifacts that some IDEs drop alongside configs
+*.token
+token.txt
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# -----------------------------------------------------------------------------
+# Packaging / build
+# -----------------------------------------------------------------------------
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# -----------------------------------------------------------------------------
+# Virtual environments
+# -----------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# -----------------------------------------------------------------------------
+# Testing / coverage
+# -----------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# -----------------------------------------------------------------------------
+# Tooling caches
+# -----------------------------------------------------------------------------
+.ruff_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+uv.lock
+# Playwright artifacts (used only during investigation; should not be shipped)
+.playwright-mcp/
+
+# -----------------------------------------------------------------------------
+# IDE / Editors
+# -----------------------------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# -----------------------------------------------------------------------------
+# OS
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db

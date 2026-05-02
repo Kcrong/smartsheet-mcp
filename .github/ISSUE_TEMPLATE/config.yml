@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Smartsheet API question
+    url: https://developers.smartsheet.com/api/smartsheet
+    about: Questions about Smartsheet's API itself (not this MCP wrapper).
+  - name: Model Context Protocol docs
+    url: https://modelcontextprotocol.io
+    about: Questions about the MCP protocol or MCP clients (Kiro, Claude, etc).
