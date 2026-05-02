@@ -61,7 +61,7 @@ jobs:
       id-token: write  # required for PyPI Trusted Publishing via OIDC
     steps:
       - name: Download dist artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: dist
           path: dist
@@ -84,7 +84,7 @@ jobs:
           ref: ${{ inputs.ref || github.ref }}
           fetch-depth: 0
       - name: Download dist artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: dist
           path: dist
